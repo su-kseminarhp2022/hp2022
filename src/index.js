@@ -4,7 +4,7 @@ import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 const root = ReactDOM.createRoot(
-    document.getElementById('main')
+    document.getElementById('root')
 );
 
 const elem = (
