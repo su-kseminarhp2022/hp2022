@@ -5,10 +5,12 @@ import About from "./pages/About"
 import NotFound from "./pages/NotFound";
 import Member from "./pages/Member";
 import Tips from "./pages/Tips";
+import DrawerAppBar from "./components/header";
 
 export default function App() {
   return (
       <BrowserRouter>
+          <DrawerAppBar />
           <p>hello</p>
           <Routes>
               <Route exact path="/" element={<Home />} />
