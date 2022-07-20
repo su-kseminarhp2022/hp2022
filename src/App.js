@@ -5,12 +5,13 @@ import About from "./pages/About"
 import NotFound from "./pages/NotFound";
 import Member from "./pages/Member";
 import Tips from "./pages/Tips";
-import DrawerAppBar from "./components/header";
+import HeaderBar from "./components/header";
+import FooterBar from "./components/footer";
 
 export default function App() {
   return (
       <BrowserRouter>
-          <DrawerAppBar />
+          <HeaderBar />
           <p>hello</p>
           <Routes>
               <Route exact path="/" element={<Home />} />
@@ -19,6 +20,7 @@ export default function App() {
               <Route path="/tips" element={<Tips />} />
               <Route path="/*" element={<NotFound />} />
           </Routes>
+          <FooterBar />
       </BrowserRouter>
   );
 }
