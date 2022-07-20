@@ -29,30 +29,24 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     },
 }));
 
-消してもらう
-function createMemberData(name_ja, name_en, grade, theme) {
-    return { name_ja, name_en, grade, theme };
-}
-ここまで
-
 function createOBData(name_ja, name_en, grad_year, type, title) {
     return { name_ja, name_en, grad_year, type, title };
 }
 
 const rows = [
-    createOBData("浅野 裕介", "Asano Yusuke", 3, "画像処理について"),
-    createOBData("上園 紬真", "Uezono Yuma", 3, "電子投票について"),
-    createOBData("何睿", "en name", 3, "二次元コードについて"),
-    createOBData("郭政揚","en name" , 3, "認証について"),
-    createOBData("田中 優", "Tanaka Yu", 3, "情報教育支援ソフトについて"),
-    createOBData("橋本 辰浩", "Hashimoto Tatsuhiro", 3, "秘密計算ソフトウェアの開発"),
-    createOBData("金成 辰朗","en name", 4, "東アジアにおけるキャッシュレス決済の発展の違い"),
-    createOBData("石冰清", "en name", 4, "Pythonにおける暗号プログラミングの応用モデル"),
-    createOBData("西川 巧馬", "Nishikawa Takuma", 4, "身分証明書の電子化と認証システム導入における今後の展望"),
-    createOBData("山口 敬太", "Yamaguchi Keita", 4, "日本国内のキャッシュレス普及について"),
-    createOBData("吉元 碧空", "Yoshimoto Sora", 4, "AIを活用したサイバー攻撃対策"),
-    createOBData("蘇逸航", "en name", 4, "C言語による認証システムの応用モデル"),
-    createOBData("崔宇瀅", "en name", 4, "大学におけるスマートフォンを用いたeチケットシステムの応用モデル")
+    createOBData("浅野 裕介", "Asano Yusuke", "2024予定", "", "画像処理について")
+    createOBData("上園 紬真", "Uezono Yuma", "2024予定", "電子投票について"),
+    createOBData("何睿", "en name", "2024予定", "", "二次元コードについて"),
+    createOBData("郭政揚","en name" , "2024予定, "認証について"),
+    createOBData("田中 優", "Tanaka Yu", "2024予定, "情報教育支援ソフトについて"),
+    createOBData("橋本 辰浩", "Hashimoto Tatsuhiro", "2024予定, "秘密計算ソフトウェアの開発"),
+    createOBData("金成 辰朗","en name", , "東アジアにおけるキャッシュレス決済の発展の違い"),
+    createOBData("石冰清", "en name", "2023予定, "Pythonにおける暗号プログラミングの応用モデル"),
+    createOBData("西川 巧馬", "Nishikawa Takuma", "2023予定, "身分証明書の電子化と認証システム導入における今後の展望"),
+    createOBData("山口 敬太", "Yamaguchi Keita", "2023予定, "日本国内のキャッシュレス普及について"),
+    createOBData("吉元 碧空", "Yoshimoto Sora", "2023予定, "AIを活用したサイバー攻撃対策"),
+    createOBData("蘇逸航", "en name", "2023予定, "C言語による認証システムの応用モデル"),
+    createOBData("崔宇瀅", "en name", "2023予定, "大学におけるスマートフォンを用いたeチケットシステムの応用モデル")
 ];
 
 "",
@@ -69,35 +63,7 @@ const rows_ob = [
 export default function Member() {
     return (
         <Box >
-            <h2>ゼミメンバー （2022/07/17 現在）</h2>
-
-
-            消してもらう部分
-            <TableContainer component={Paper}>
-                <Table sx={{ minWidth: 700 }} aria-label="customized table">
-                    <TableHead>
-                        <TableRow>
-                            <StyledTableCell>氏名（Name）</StyledTableCell>
-                            <StyledTableCell align="right">所属年次</StyledTableCell>
-                            <StyledTableCell align="right">研究テーマ</StyledTableCell>
-                        </TableRow>
-                    </TableHead>
-                    <TableBody>
-                        {rows.map((row) => (
-                            <StyledTableRow key={row.name_ja}>
-                                <StyledTableCell component="th" scope="row">
-                                    {row.name_ja} ({row.name_en})
-                                </StyledTableCell>
-                                <StyledTableCell align="right">{row.grade}</StyledTableCell>
-                                <StyledTableCell align="right">{row.theme}</StyledTableCell>
-                            </StyledTableRow>
-                        ))}
-                    </TableBody>
-                </Table>
-            </TableContainer>
-            ここまで
-
-            <h2>ゼミ OB</h2> ゼミメンバーに変える
+            <h2>ゼミメンバー （2022/07/20 現在）</h2>
 
             <TableContainer component={Paper}>
                 <Table sx={{ minWidth: 700 }} aria-label="customized table">
