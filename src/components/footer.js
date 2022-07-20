@@ -14,7 +14,7 @@ const theme = createTheme({
 export default function FooterBar() {
     return (
         <ThemeProvider theme={theme}>
-            <Box color="primary">
+            <Box bgcolor="primary.main" py={5}>
                 <Typography align="center">
                     Copyright &copy; Shoin University - KIM seminar 2022.
                 </Typography>
