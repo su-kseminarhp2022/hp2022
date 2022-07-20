@@ -12,7 +12,6 @@ export default function App() {
   return (
       <BrowserRouter>
           <HeaderBar />
-          <p>hello</p>
           <Routes>
               <Route exact path="/" element={<Home />} />
               <Route path="/about" element={<About />} />
