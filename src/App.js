@@ -8,16 +8,18 @@ import Tips from "./pages/Tips";
 import HeaderBar from "./components/header";
 import FooterBar from "./components/footer";
 
+const pubURL = process.env.PUBLIC_URL;
+
 export default function App() {
   return (
       <BrowserRouter>
           <HeaderBar />
           <Routes>
-              <Route exact path="/hp2022/" element={<Home />} />
-              <Route path="/hp2022/about" element={<About />} />
-              <Route path="/hp2022/member" element={<Member />} />
-              <Route path="/hp2022/tips" element={<Tips />} />
-              <Route path="/hp2022/*" element={<NotFound />} />
+              <Route exact path={pubURL} element={<Home />} />
+              <Route path={pubURL + "/about"} element={<About />} />
+              <Route path={pubURL + "/member"} element={<Member />} />
+              <Route path={pubURL + "/tips"} element={<Tips />} />
+              <Route path={pubURL + "/*"} element={<NotFound />} />
           </Routes>
           <FooterBar />
       </BrowserRouter>
