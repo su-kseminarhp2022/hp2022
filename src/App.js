@@ -13,11 +13,11 @@ export default function App() {
       <BrowserRouter>
           <HeaderBar />
           <Routes>
-              <Route exact path="/" element={<Home />} />
-              <Route path="/about" element={<About />} />
-              <Route path="/member" element={<Member />} />
-              <Route path="/tips" element={<Tips />} />
-              <Route path="/*" element={<NotFound />} />
+              <Route exact path="/hp2022/" element={<Home />} />
+              <Route path="/hp2022/about" element={<About />} />
+              <Route path="/hp2022/member" element={<Member />} />
+              <Route path="/hp2022/tips" element={<Tips />} />
+              <Route path="/hp2022/*" element={<NotFound />} />
           </Routes>
           <FooterBar />
       </BrowserRouter>
