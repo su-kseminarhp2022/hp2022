@@ -22,7 +22,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
   },
-  "homepage": "https://su-kseminarhp2022.github.io/",
+  "homepage": "https://su-kseminarhp2022.github.io/hp2022",
   "eslintConfig": {
     "extends": [
       "react-app",
