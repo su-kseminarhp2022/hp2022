@@ -8,7 +8,7 @@ import Tips from "./pages/Tips";
 import HeaderBar from "./components/header";
 import FooterBar from "./components/footer";
 
-const pubURL = process.env.PUBLIC_URL;
+const pubURL = "";
 
 export default function App() {
   return (
