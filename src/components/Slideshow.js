@@ -1,32 +1,40 @@
-import react, {useState, useEffect} from 'react';
-import { CSSTransition } from "react-transition-group";
-import styles from "./Slideshow.module.scss";
+import React from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/effect-fade";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
 
-export default function Showcase(sec = 1000, images = []) {
-    const [count, setCount] = useState(0);
-
-    useEffect(() => {
-        const interval = setInterval(() => {
-            setCount((count) => {
-                return count >= images.length - 1 ? 0 : count + 1;
-            });
-        }, sec)
-        return () => {
-            clearInterval(interval);
-        };
-    }, [images, sec]);
-    const slide = Object.keys(images).map((image, index) => {
-        return (
-            <CSSTransition
-                key={index}
-                timeout={sec}
-                in={index === count}
-                classNames="fade"
-                unmountOnExit
+export default function Slideshow() {
+    return (
+        <>
+            <Swiper
+                spaceBetween={30}
+                effect={"fade"}
+                navigation={true}
+                pagination={{
+                    clickable: true,
+                }}
+                autoplay={{
+                    delay: 5000,
+                }}
+                modules={[EffectFade, Navigation, Pagination, Autoplay]}
+                className="mySwiper"
             >
-                <div style={{ backgroundImage: `url(${image}}` }} />
-            </CSSTransition>
-        );
-    });
-    return <section className={styles.showcase}>{slide}</section>
+                <SwiperSlide>
+                    <img src="https://media.istockphoto.com/photos/drone-point-view-of-overpass-and-city-traffic-at-night-picture-id1360535828?s=612x612" alt="pic 1" />
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://media.istockphoto.com/photos/pastel-colored-pumpkins-with-light-gray-background-for-thanksgiving-picture-id1344866269?s=612x612" alt="pic 2"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://media.istockphoto.com/photos/overpass-and-city-traffic-at-night-picture-id1393629219?s=612x612" alt="pic 3"/>
+                </SwiperSlide>
+                <SwiperSlide>
+                    <img src="https://media.istockphoto.com/photos/white-and-orange-pumpkin-picture-id860234742?s=612x612" alt="pic 4"/>
+                </SwiperSlide>
+            </Swiper>
+        </>
+    );
 }

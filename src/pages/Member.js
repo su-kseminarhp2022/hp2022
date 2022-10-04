@@ -57,7 +57,7 @@ const rows = [
 
 export default function Member() {
     return (
-        <Box py={8}>
+        <Box py={8} px={2}>
             <h2>ゼミメンバー （2022/07/20 現在）</h2>
 
             <TableContainer component={Paper}>
