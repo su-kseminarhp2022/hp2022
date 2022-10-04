@@ -44,7 +44,7 @@ function HeaderBar(props) {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }}>
+                        <ListItemButton sx={{ textAlign: 'center' }} href={(item === "Home" ? '/' : '/' + item.toLowerCase())}>
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
