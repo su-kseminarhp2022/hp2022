@@ -37,7 +37,7 @@ export default function About() {
                 <li>演習I・II</li>
             </ul>
 
-            <Link to="http://www.shoin-u.ac.jp">松蔭大学公式サイト</Link>より引用。詳しい情報は左記サイトをご参照ください。
+            <a href="http://www.shoin-u.ac.jp">松蔭大学公式サイト</a>より引用。詳しい情報は左記サイトをご参照ください。
         </Box>
     );
 }
