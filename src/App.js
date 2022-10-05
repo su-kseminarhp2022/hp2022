@@ -10,7 +10,7 @@ import FooterBar from "./components/footer";
 
 export default function App() {
   return (
-      <BrowserRouter>
+      <BrowserRouter basename="/hp2022">
           <HeaderBar />
           <Routes>
               <Route exact path="/" element={<Home />} />
