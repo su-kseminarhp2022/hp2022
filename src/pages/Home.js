@@ -1,5 +1,5 @@
 import React from 'react';
-import Box from '@mui/material/Box';
+import Box from '@mui/material/Box'
 import Slideshow from '../components/Slideshow'
 
 export default function Home() {
@@ -8,5 +8,4 @@ export default function Home() {
             <Slideshow />
         </Box>
     )
-};
-
+}
