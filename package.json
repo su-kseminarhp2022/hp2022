@@ -22,7 +22,7 @@
     "build": "react-scripts build",
     "test": "react-scripts test"
   },
-  "homepage": "https://su-kseminarhp2022.github.io/hp2022",
+  "homepage": "https://su-kseminarhp2022.github.io/",
   "browserslist": {
     "production": [
       ">0.2%",
