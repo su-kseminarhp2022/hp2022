@@ -1,7 +1,6 @@
 import React from 'react';
 import Box from '@mui/material/Box';
 
-
 export default function Tips(){
     return (
         <Box py={8} px={2}>
