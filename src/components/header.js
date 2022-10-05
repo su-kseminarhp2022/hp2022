@@ -44,7 +44,7 @@ function HeaderBar(props) {
             <List>
                 {navItems.map((item) => (
                     <ListItem key={item} disablePadding>
-                        <ListItemButton sx={{ textAlign: 'center' }} href={(item === "Home" ? '/' : '/' + item.toLowerCase())}>
+                        <ListItemButton sx={{ textAlign: 'center' }} component={Link} to={(item === "Home" ? '/' : '/' + item.toLowerCase())}>
                             <ListItemText primary={item} />
                         </ListItemButton>
                     </ListItem>
@@ -92,7 +92,7 @@ function HeaderBar(props) {
                         open={mobileOpen}
                         onClose={handleDrawerToggle}
                         ModalProps={{
-                            keepMounted: true, // Better open performance on mobile.
+                            keepMounted: true,
                         }}
                         sx={{
                             display: { xs: 'block', sm: 'none' },
@@ -108,10 +108,6 @@ function HeaderBar(props) {
 }
 
 HeaderBar.propTypes = {
-    /**
-     * Injected by the documentation to work in an iframe.
-     * You won't need it on your project.
-     */
     window: PropTypes.func,
 };
 
