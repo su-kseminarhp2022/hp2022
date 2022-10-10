@@ -9,27 +9,22 @@ import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
 import "./styles.scss";
-import {Lazy, Pagination, Navigation, Autoplay} from "swiper";
+import {Lazy, Autoplay} from "swiper";
 
 export default function Slideshow() {
     return (
         <>
             <Swiper
-                style={{
-                    "--swiper-navigation-color": "#000",
-                    "--swiper-pagination-color": "#000",
-                }}
                 lazy={true}
-                pagination={{
-                    clickable: true,
-                }}
-                navigation={true}
+                speed={3000}
                 autoplay={{
-                    delay: 3000,
+                    delay: 4000,
                 }}
-                modules={[Lazy, Pagination, Navigation, Autoplay]}
+                modules={[Lazy, Autoplay]}
                 centeredSlides={true}
                 slidesPerView={1.5}
+                loop={true}
+                allowTouchMove={false}
             >
                 <SwiperSlide>
                     <img

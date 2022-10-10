@@ -23,7 +23,6 @@ const StyledTableRow = styled(TableRow)(({ theme }) => ({
     '&:nth-of-type(odd)': {
         backgroundColor: theme.palette.action.hover,
     },
-    // hide last border
     '&:last-child td, &:last-child th': {
         border: 0,
     },
@@ -45,7 +44,7 @@ const rows_2024 = [
 const rows_2023 = [
     createData("金成 辰朗","en name",  "","東アジアにおけるキャッシュレス決済の発展の違い"),
     createData("石冰清", "en name",  "", "Pythonにおける暗号プログラミングの応用モデル"),
-    createData("西川 巧馬", "Nishikawa Takuma", "", "", "身分証明書の電子化と認証システム導入における今後の展望"),
+    createData("西川 巧馬", "Nishikawa Takuma", "", "身分証明書の電子化と認証システム導入における今後の展望"),
     createData("山口 敬太", "Yamaguchi Keita",  "", "日本国内のキャッシュレス普及について"),
     createData("吉元 碧空", "Yoshimoto Sora", "", "AIを活用したサイバー攻撃対策"),
     createData("蘇逸航", "en name", "", "C言語による認証システムの応用モデル"),
@@ -72,7 +71,6 @@ export default function Member() {
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>氏名（Name）</StyledTableCell>
-                            <StyledTableCell align="right">種別</StyledTableCell>
                             <StyledTableCell align="right">タイトル</StyledTableCell>
                         </TableRow>
                     </TableHead>
@@ -82,7 +80,6 @@ export default function Member() {
                                 <StyledTableCell component="th" scope="row">
                                     {row.name_ja} ({row.name_en})
                                 </StyledTableCell>
-                                <StyledTableCell align="right">{row.type}</StyledTableCell>
                                 <StyledTableCell align="right">{row.title}</StyledTableCell>
                             </StyledTableRow>
                         ))}
@@ -96,7 +93,6 @@ export default function Member() {
                     <TableHead>
                         <TableRow>
                             <StyledTableCell>氏名（Name）</StyledTableCell>
-                            <StyledTableCell align="right">種別</StyledTableCell>
                             <StyledTableCell align="right">タイトル</StyledTableCell>
                         </TableRow>
                     </TableHead>
@@ -106,7 +102,6 @@ export default function Member() {
                                 <StyledTableCell component="th" scope="row">
                                     {row.name_ja} ({row.name_en})
                                 </StyledTableCell>
-                                <StyledTableCell align="right">{row.type}</StyledTableCell>
                                 <StyledTableCell align="right">{row.title}</StyledTableCell>
                             </StyledTableRow>
                         ))}
