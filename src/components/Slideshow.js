@@ -1,18 +1,15 @@
+
 import pic1 from "../img/1.jpg";
 import pic2 from "../img/2.jpg";
 import pic3 from "../img/3.jpg";
 import pic4 from "../img/4.jpg";
-
-import React, from "react";
+import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
 import "swiper/css";
 import "swiper/css/lazy";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-
 import "./styles.scss";
-
 import {Lazy, Pagination, Navigation, Autoplay} from "swiper";
 
 export default function Slideshow() {
@@ -36,16 +33,32 @@ export default function Slideshow() {
                 slidesPerView={1.5}
             >
                 <SwiperSlide>
-                    <img data-src={pic1} alt="pic1" />
+                    <img
+                        data-src={pic1}
+                        className="swiper-lazy"
+                        alt="pic1"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img data-src={pic2} alt="pic2" />
+                    <img
+                        data-src={pic2}
+                        className="swiper-lazy"
+                        alt="pic2"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img data-src={pic3} alt="pic3" />
+                    <img
+                        data-src={pic3}
+                        className="swiper-lazy"
+                        alt="pic3"
+                    />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img data-src={pic4} alt="pic4" />
+                    <img
+                        data-src={pic4}
+                        className="swiper-lazy"
+                        alt="pic4"
+                    />
                 </SwiperSlide>
             </Swiper>
         </>
