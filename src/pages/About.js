@@ -1,15 +1,15 @@
 import React from 'react';
 import Box from '@mui/material/Box';
-import Link from '@mui/material/Link';
+import { Link } from 'react-router-dom';
 
 export default function About() {
     return (
         <Box py={8} px={2}>
 
-                <h2>松蔭大学 金ゼミについての紹介</h2>
+            <h2>松蔭大学 金ゼミについての紹介</h2>
 
-                <a>このゼミでは、「演習I・II」を履修している3年次、4年次生が情報セキュリティや認証技術、その他の情報活用システム等について学習しています。</a><br/>
-                ※ 所属している学生及び研究テーマについては <Link to="/member">こちら</Link>をご覧ください。<br/><br/>
+            <a>このゼミでは、「演習I・II」を履修している3年次、4年次生が情報セキュリティや認証技術、その他の情報活用システム等について学習しています。</a><br/>
+            <a>※ 所属している学生及び研究テーマについては <Link to="/member">ゼミメンバー</Link> をご覧ください。</a><br/><br/>
 
 
             <a>情報関連職種への就職を目指していて、高度情報化社会で活躍できるような人材二なることを目標としています。</a><br/>
@@ -37,7 +37,7 @@ export default function About() {
                 <li>演習I・II</li>
             </ul>
 
-            <a href="http://www.shoin-u.ac.jp">松蔭大学公式サイト</a>より引用。詳しい情報は左記サイトをご参照ください。
+            <a href="http://www.shoin-u.ac.jp" target="_blank" rel="noopener noreferrer">松蔭大学公式サイト</a>より引用。詳しい情報は左記サイトをご参照ください。
         </Box>
     );
 }
