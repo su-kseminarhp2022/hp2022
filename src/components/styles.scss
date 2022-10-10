@@ -1,14 +1,16 @@
 .swiper {
-  width: 50%;
-  height: 50%;
+  width: auto;
+  height: 75%;
 }
 
 .swiper-slide {
   background-position: center;
   background-size: cover;
+  text-align: center;
 }
 
 .swiper-slide img {
   display: block;
-  width: 50%;
+  width: auto;
+  text-align: center;
 }

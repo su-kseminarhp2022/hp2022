@@ -1,38 +1,51 @@
-import React from "react";
+import pic1 from "../img/1.jpg";
+import pic2 from "../img/2.jpg";
+import pic3 from "../img/3.jpg";
+import pic4 from "../img/4.jpg";
+
+import React, from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
+
 import "swiper/css";
-import "swiper/css/effect-fade";
-import "swiper/css/navigation";
+import "swiper/css/lazy";
 import "swiper/css/pagination";
-import { EffectFade, Navigation, Pagination, Autoplay } from "swiper";
+import "swiper/css/navigation";
+
+import "./styles.scss";
+
+import {Lazy, Pagination, Navigation, Autoplay} from "swiper";
 
 export default function Slideshow() {
     return (
         <>
             <Swiper
-                spaceBetween={30}
-                effect={"fade"}
-                navigation={true}
+                style={{
+                    "--swiper-navigation-color": "#000",
+                    "--swiper-pagination-color": "#000",
+                }}
+                lazy={true}
                 pagination={{
                     clickable: true,
                 }}
+                navigation={true}
                 autoplay={{
-                    delay: 5000,
+                    delay: 3000,
                 }}
-                modules={[EffectFade, Navigation, Pagination, Autoplay]}
-                className="mySwiper"
+                modules={[Lazy, Pagination, Navigation, Autoplay]}
+                centeredSlides={true}
+                slidesPerView={1.5}
             >
                 <SwiperSlide>
-                    <img src="https://media.istockphoto.com/photos/drone-point-view-of-overpass-and-city-traffic-at-night-picture-id1360535828?s=612x612" alt="pic 1" />
+                    <img data-src={pic1} alt="pic1" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://media.istockphoto.com/photos/pastel-colored-pumpkins-with-light-gray-background-for-thanksgiving-picture-id1344866269?s=612x612" alt="pic 2"/>
+                    <img data-src={pic2} alt="pic2" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://media.istockphoto.com/photos/overpass-and-city-traffic-at-night-picture-id1393629219?s=612x612" alt="pic 3"/>
+                    <img data-src={pic3} alt="pic3" />
                 </SwiperSlide>
                 <SwiperSlide>
-                    <img src="https://media.istockphoto.com/photos/white-and-orange-pumpkin-picture-id860234742?s=612x612" alt="pic 4"/>
+                    <img data-src={pic4} alt="pic4" />
                 </SwiperSlide>
             </Swiper>
         </>
